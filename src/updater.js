@@ -73,7 +73,7 @@ const offlineUpdater = function offlineUpdater(
     };
   }
 
-  if (action.type === PERSIST_REHYDRATE) {
+  if (action.type === PERSIST_REHYDRATE && action.payload) {
     return {
       ...state,
       ...action.payload.offline,
